@@ -51,6 +51,12 @@ header {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--fontColor-default);
+  background: #f5fdff;
+  padding-bottom: 16px;
+}
+body {
+  padding: 0;
+  margin: 0;
 }
 
 </style>
