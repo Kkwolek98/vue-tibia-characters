@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 
-export type Microservice = 'characters' | 'worlds' | 'guilds' | 'highscore' | 'houses' | 'news' | '';
+export type Microservice = 'characters' | 'world' | 'guilds' | 'highscore' | 'houses' | 'news' | '';
 
 class HttpApiClient {
     private _http: AxiosInstance;

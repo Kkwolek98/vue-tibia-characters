@@ -15,7 +15,7 @@ const routes: Array<RouteConfig> = [
   {
     path: '/world/:world',
     name: 'World',
-    component: () => import('../views/World.vue'),
+    component: () => import('../views/WorldView.vue'),
     meta: { pathHeader: (route: Route) => `${route.params.world}`}
   }
 ]

@@ -18,6 +18,9 @@ export interface World {
     additional: string
 }
 
+export interface WorldInformation {
+}
+
 
 export type WorldLocation = 'Europe' | 'South America' | 'North America';
 export type WorldPvpType = 'Open PvP' | 'Retro Hardcore PvP' | 'Optional PvP' | 'Retro Open PvP';

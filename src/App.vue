@@ -61,5 +61,12 @@ body {
   padding: 0;
   margin: 0;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 40px;
+  row-gap: 20px;
+  padding: 24px 64px;
+}
 
 </style>

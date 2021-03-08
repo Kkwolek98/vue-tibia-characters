@@ -1,6 +1,6 @@
 <template>
   <div class="worlds">
-    <div class="container">
+    <div class="grid-container">
       <card v-for="world in worlds" :key="world.name" @click.native="navigateTo(world.name)">
         <div class="card-header">{{ world.name }}</div>
         <div class="card-options">
@@ -41,11 +41,4 @@ export default class Worlds extends Vue {
 </script>
 
 <style lang="scss">
-.container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 40px;
-  row-gap: 20px;
-  padding: 24px 64px;
-}
 </style>
