@@ -1,7 +1,7 @@
 <template>
   <div class="worlds">
     <div class="container">
-      <card v-for="world in worlds" :key="world.name">
+      <card v-for="world in worlds" :key="world.name" @click.native="navigateTo(world.name)">
         <div class="card-header">{{ world.name }}</div>
         <div class="card-options">
           <label>Online:</label> <div>{{ world.online }} players</div>
@@ -31,6 +31,10 @@ export default class Worlds extends Vue {
 
   mounted() {
     worldsService.getWorlds().then((response) => this.worlds = response.worlds.allworlds);
+  }
+
+  public navigateTo(world: string) {
+    this.$router.push('/world/' + world)
   }
 
 }

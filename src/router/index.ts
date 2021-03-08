@@ -1,6 +1,7 @@
 import Vue from 'vue'
-import VueRouter, { RouteConfig } from 'vue-router'
+import VueRouter, { RouteConfig, Route } from 'vue-router'
 import Worlds from '../views/Worlds.vue'
+
 
 Vue.use(VueRouter)
 
@@ -11,11 +12,12 @@ const routes: Array<RouteConfig> = [
     component: Worlds,
     meta: { pathHeader: 'Worlds' }
   },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   component: () => import('../views/About.vue')
-  // }
+  {
+    path: '/world/:world',
+    name: 'World',
+    component: () => import('../views/World.vue'),
+    meta: { pathHeader: (route: Route) => `${route.params.world}`}
+  }
 ]
 
 const router = new VueRouter({

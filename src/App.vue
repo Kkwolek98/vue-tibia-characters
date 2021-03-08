@@ -25,6 +25,9 @@ export default Vue.extend({
   },
   methods: {
     getHeader(): string {
+      if (typeof this.$route.meta?.pathHeader === 'function') {
+        return this.$route.meta?.pathHeader(this.$route);
+      }
       return this.$route.meta?.pathHeader || '';
     }
   }
